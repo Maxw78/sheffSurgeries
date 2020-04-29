@@ -5,12 +5,13 @@ class Surgery {
 	String name
 	String address
 	String postcode
-	int telephone
+	String telephone
 	int numberOfPatients 
 	String description
 	String openingTime
 
     static constraints = {
+
 	name nullable: false, blank: false, maxSize: 50
 	address nullable: false, blank: false, maxSize: 70
 	postcode nullable: false, blank: false, minSize: 3, maxSize: 6
