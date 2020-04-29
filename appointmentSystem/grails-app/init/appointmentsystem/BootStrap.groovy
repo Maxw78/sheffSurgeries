@@ -6,9 +6,16 @@ class BootStrap {
 	
 	def Appointment1 = new Appointment(
 	appDate:new Date('09/09/2019'),
-	appTime:'3:00pm',
+	appTime:'9:00am',
 	appDuration:120,
 	roomNumber:'EEE-5'
+	).save()
+
+	def Appointment2 = new Appointment(
+	appDate:new Date('11/04/2019'),
+	appTime:'3:00pm',
+	appDuration:30,
+	roomNumber:'A-1111'
 	).save()
 
 	def Doctor1 = new Doctor (
@@ -22,12 +29,31 @@ class BootStrap {
 	bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ante sapien, consequat et diam sit amet, dapibus 		bibendum justo. Duis laoreet hendrerit lobortis. Praesent dignissim rhoncus tortor eget tincidunt. Morbi mattis porta 		nibh, vitae mattis ex tristique non. In vulputate, massa sit amet porttitor condimentum, sem neque ultrices ipsum, 		hendrerit pretium tortor enim et felis. In nec gravida est. Aenean vel lacus eu nisl ullamcorper scelerisque faucibus 		id lacus. Aliquam erat volutpat.'
 	).save()
 
+	def Doctor2 = new Doctor (
+	fullName:'Dr Sarah Macdonald',
+	qualification:'MBChB(Sheffield)',
+	position:'GP, Surgeon',
+	doctorEmail:'s.macdonald@myemail.com',
+	password:'secret222',
+	doctorOffice:'D-9888',
+	doctorPhone:'01111777',
+	bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ante sapien, consequat et diam sit amet, dapibus 		bibendum justo. Duis laoreet hendrerit lobortis. Praesent dignissim rhoncus tortor eget tincidunt. Morbi mattis porta 		nibh, vitae mattis ex tristique non. In vulputate, massa sit amet porttitor condimentum, sem neque ultrices ipsum, 		hendrerit pretium tortor enim et felis. In nec gravida est. Aenean vel lacus eu nisl ullamcorper scelerisque faucibus 		id lacus. Aliquam erat volutpat.'
+	).save()
+
 	def Nurse1 = new Nurse (
 	nurseName:'Jacky Smith',
 	qualifications:'Degree in Nursing',
 	nurseEmail:'JackyS@gmail.com',
 	nurseOffice:'E555',
 	nursePhone:'0745389034'
+	).save()
+
+	def Nurse2 = new Nurse (
+	nurseName:'Susan Peters',
+	qualifications:'Registered General Nurse',
+	nurseEmail:'s.peters@meyemail.com',
+	nurseOffice:'B-4555',
+	nursePhone:'0114 222 4433'
 	).save()
 
 	def Patient1 = new Patient (
@@ -40,6 +66,16 @@ class BootStrap {
 	patientPhone:'0114 245 2345'
 	).save()
 
+	def Patient2 = new Patient (
+	patientName:'Tom Rivers',
+	patientAddress:'2 One Way Street, Eckington',
+	patientResidence:'Sheffield',
+	patientDob:new Date('20/09/1988'),
+	patientID:2555,
+	dateRegistered:new Date('26/02/2018'),
+	patientPhone:'0114 222 4444'
+	).save()
+
 	def Prescription1 = new Prescription (
 	pharmacyName:'Loans Pharmacy',
 	prescripNumber:2,
@@ -49,6 +85,15 @@ class BootStrap {
 	patientPaying:true
 	).save()
 
+	def Prescription2 = new Prescription (
+	pharmacyName:'City Centre Pharmacy',
+	prescripNumber:56788,
+	medicine:'Paracetomol',
+	totalCost:5.90,
+	dateIssued:new Date('25/05/2019'),
+	patientPaying:true
+	).save()	
+
 	def Receptionist1 = new Receptionist (
 	recepName:'Daveson Phobes',
 	recepEmail:'DavesonP@gmail.com',	
@@ -57,14 +102,32 @@ class BootStrap {
 	recepPhone:'0114 2 555'
 	).save()
 
+	def Receptionist2 = new Receptionist (
+	recepName:'Rob Kingston',
+	recepEmail:'r.kingston@email.com',	
+	recepUserame:'rking',
+	recepPassword:'Secret2019',
+	recepPhone:'0114 222 4445'
+	).save()
+
 	def Surgery1 = new Surgery (
 	name:'Loans Surgery',
 	address:'64 Chesterfield Road',
 	postcode:'S8 4JN',
 	telephone:'0114 34 877',
 	numberOfPatients:1000,
-	description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ante sapien, consequat et diam sit amet, 		dapibus bibendum justo. Duis laoreet hendrerit lobortis. Praesent dignissim rhoncus tortor eget tincidunt. Morbi mattis 	porta nibh, vitae mattis ex tristique non. In vulputate, massa sit amet porttitor condimentum, sem neque ultrices 		ipsum, 	hendrerit pretium tortor enim et felis. In nec gravida est. Aenean vel lacus eu nisl ullamcorper scelerisque 		faucibus idlacus. Aliquam erat volutpat.',
+	description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ante sapien, consequat et diam sit amet, 		dapibus bibendum justo. Duis laoreet hendrerit lobortis. Praesent dignissim rhoncus tortor eget tincidunt. Morbi mattis 	porta nibh, vitae mattis ex tristique non. In vulputate, massa sit amet porttitor condimentum, sem neque ultrices 		ipsum, hendrerit pretium tortor enim et felis. In nec gravida est. Aenean vel lacus eu nisl ullamcorper scelerisque 		faucibus idlacus. Aliquam erat volutpat.',
 	openingTime:'08:00-17:00hrs'
+	).save()
+
+	def Surgery2 = new Surgery (
+	name:'City Health Centre',
+	address:'21 Marble Street, Sheffield',
+	postcode:'S11 5TY',
+	telephone:'0114 555 555',
+	numberOfPatients:50,
+	description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ante sapien, consequat et diam sit amet, 		dapibus bibendum justo. Duis laoreet hendrerit lobortis. Praesent dignissim rhoncus tortor eget tincidunt. Morbi mattis 	porta nibh, vitae mattis ex tristique non. In vulputate, massa sit amet porttitor condimentum, sem neque ultrices 		ipsum, hendrerit pretium tortor enim et felis. In nec gravida est. Aenean vel lacus eu nisl ullamcorper scelerisque 		faucibus idlacus. Aliquam erat volutpat.',
+	openingTime:'09:00-17:00hrs'
 	).save()
 
 
