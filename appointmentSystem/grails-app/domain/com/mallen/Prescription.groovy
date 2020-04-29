@@ -12,7 +12,7 @@ class Prescription {
     static constraints = {
 
 	pharmacyName nullable: false, blank: false, maxSize: 50
-	prescripNumber nullable: false, blank: false, max: 100000
+	prescripNumber nullable: false, blank: false
 	medicine nullable: false, blank: false, maxSize: 50
 	totalCost nullable: false, blank: false, scale: 2
 	dateIssued nullable: false, blank: false
