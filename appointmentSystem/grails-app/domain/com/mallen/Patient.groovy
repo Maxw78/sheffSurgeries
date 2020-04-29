@@ -16,9 +16,9 @@ class Patient {
 	patientAddress nullable: false, blank: false, maxSize: 70
 	patientResidence nullable: false, blank: false, maxSize: 30
 	patientDob nullable: false, blank: false
-	patientID nullable: false, blank: false,
+	patientID nullable: false, blank: false
 	dateRegistered nullable: false, blank: false
-	patientPhone nullable: false, blank: false, minSize: 6, maxSize: 12
+	patientPhone nullable: false, blank: false, minSize: 6, maxSize: 17
 
     }
 }
