@@ -2,74 +2,81 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>Welcome to Grails</title>
+    <title>Hallam Medical Practice</title>
 </head>
 <body>
 <content tag="nav">
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Application Status <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="#">Environment: ${grails.util.Environment.current.name}</a></li>
-            <li class="dropdown-item"><a href="#">App profile: ${grailsApplication.config.grails?.profile}</a></li>
-            <li class="dropdown-item"><a href="#">App version:
-                <g:meta name="info.app.version"/></a>
-            </li>
-            <li role="separator" class="dropdown-divider"></li>
-            <li class="dropdown-item"><a href="#">Grails version:
-                <g:meta name="info.app.grailsVersion"/></a>
-            </li>
-            <li class="dropdown-item"><a href="#">Groovy version: ${GroovySystem.getVersion()}</a></li>
-            <li class="dropdown-item"><a href="#">JVM version: ${System.getProperty('java.version')}</a></li>
-            <li role="separator" class="dropdown-divider"></li>
-            <li class="dropdown-item"><a href="#">Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</a></li>
-        </ul>
-    </li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Artefacts <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-            <li class="dropdown-item"><a href="#">Controllers: ${grailsApplication.controllerClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Domains: ${grailsApplication.domainClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Services: ${grailsApplication.serviceClasses.size()}</a></li>
-            <li class="dropdown-item"><a href="#">Tag Libraries: ${grailsApplication.tagLibClasses.size()}</a></li>
-        </ul>
-    </li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Installed Plugins <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-            <g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-                <li class="dropdown-item"><a href="#">${plugin.name} - ${plugin.version}</a></li>
-            </g:each>
-        </ul>
-    </li>
-</content>
 
-<div class="svg" role="presentation">
-    <div class="grails-logo-container">
-        <asset:image src="grails-cupsonly-logo-white.svg" class="grails-logo"/>
-    </div>
-</div>
 
 <div id="content" role="main">
     <section class="row colset-2-its">
-        <h1>Welcome to Grails</h1>
+        <h1 style="color:8B0000">Hallam Medical Practice</h1>
+ 	<p>Hello and welcome to the Sheffield Hallam Medical Practice Database page. You can use this web application to view things stored on the 		medical database using the navigation controller below. 
+        </p><br>
+	</div>
 
-        <p>
-            Congratulations, you have successfully started your first Grails application! At the moment
-            this is the default page, feel free to modify it to either redirect to a controller or display
-            whatever content you may choose. Below is a list of controllers that are currently deployed in
-            this application, click on each to execute its default action:
-        </p>
+	<div class="container">
+	<form>
+	<br>
+	<h4> Surgery Mangement </h4>
+	<p>This button will let you view the Surgery details </p>
+	<button type="button" class="btn btn-success">
+	<g:link controller="Surgery" action="index">View Surgery</g:link>
+	</button>
+	<br>
+	<br>
 
-        <div id="controllers" role="navigation">
-            <h2>Available Controllers:</h2>
-            <ul>
-                <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-                    <li class="controller">
-                        <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
-                    </li>
-                </g:each>
-            </ul>
-        </div>
+	
+	<h4> Doctor Mangement </h4>
+	<p> This button will let you view the Doctors details</p>
+	<button type="button" class="btn btn-success">
+	<g:link controller="Doctor" action="index">View Doctor</g:link>
+	</button>
+	<br>
+	<br>
+
+	
+	<h4>Appointment Mangement</h4>
+	<p> This button will let you view the Appointment details</p>
+	<button type="button" class="btn btn-success">
+	<g:link controller="Appointment" action="index">View Appointment</g:link>
+	</button>
+	<br>
+	<br>
+	
+	
+	<h4>Patient Mangement</h4>
+	<p> This button will let you view the Patient details</p>
+	<button type="button" class="btn btn-success">
+	<g:link controller="Patient" action="index">View Patient</g:link>
+	</button>
+	<br>
+	<br>
+
+	<h4>Nurse Mangement</h4>
+	<p> This button will let you view the Nurse details</p>
+	<button type="button" class="btn btn-success">
+	<g:link controller="Nurse" action="index">View Nurse</g:link>
+	</button>
+	<br>
+	<br>
+	
+	<h4>Receptionist Mangement</h4>
+	<p> This button will let you view the Receptionist details</p>
+	<button type="button" class="btn btn-success">
+	<g:link controller="Receptionist" action="index">View Receptionist</g:link>
+	</button>
+	<br>
+	<br>
+	
+	<h4>Prescription Mangement</h4>
+	<p> This button will let you view the Prescription details</p>
+	<button type="button" class="btn btn-success">
+	<g:link controller="Prescription" action="index">View Prescription</g:link>
+	</button>
+	</form>
+	</div>
+
     </section>
 </div>
 

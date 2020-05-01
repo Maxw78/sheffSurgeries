@@ -6,6 +6,8 @@ class Appointment {
 	String appTime
 	int appDuration
 	String roomNumber
+	static hasMany=[surgerys:Surgery]
+	static belongsTo=[Doctor, Surgery]
 	String toString() { return appDate }
 
     static constraints = {

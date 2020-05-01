@@ -10,7 +10,9 @@ class Doctor {
 	String doctorOffice
 	String doctorPhone
 	String bio
-	static hasMany=[nurses:Nurse, prescriptions:Prescription, patients:Patient, appointments:Appointment]
+	static hasMany=[prescriptions:Prescription, nurses:Nurse, patients:Patient, appointments:Appointment]
+	static belongsTo=[Surgery]
+	String toString() {return fullName}
 
 	
 

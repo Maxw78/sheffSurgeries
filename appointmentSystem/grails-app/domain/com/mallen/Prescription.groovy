@@ -8,7 +8,8 @@ class Prescription {
 	Double totalCost
 	Date dateIssued
 	Boolean patientPaying
-
+	static belongsTo=[Doctor, Patient]
+	String toString() {return medicine}
 
     static constraints = {
 
