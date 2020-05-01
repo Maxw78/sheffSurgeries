@@ -9,6 +9,8 @@ class Patient {
 	int patientID
 	Date dateRegistered
 	String patientPhone
+	Appointment appointment
+	static hasMany=[doctors:Doctor, prescriptions:Prescription, surgerys:Surgery]
 
     static constraints = {
 

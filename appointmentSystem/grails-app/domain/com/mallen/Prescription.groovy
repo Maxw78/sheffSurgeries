@@ -9,6 +9,7 @@ class Prescription {
 	Date dateIssued
 	Boolean patientPaying
 
+
     static constraints = {
 
 	pharmacyName nullable: false, blank: false, maxSize: 50

@@ -10,6 +10,9 @@ class Doctor {
 	String doctorOffice
 	String doctorPhone
 	String bio
+	static hasMany=[nurses:Nurse, prescriptions:Prescription, patients:Patient, appointments:Appointment]
+
+	
 
     static constraints = {
 	
