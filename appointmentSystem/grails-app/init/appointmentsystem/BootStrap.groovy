@@ -32,7 +32,8 @@ class BootStrap {
 	password:'VerySecretPass1',
 	doctorOffice:'GP-100',
 	doctorPhone:'0114 32 543',
-	bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ante sapien, consequat et diam sit amet, dapibus bibendum 	justo. Duis 		laoreet hendrerit lobortis.'
+	bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ante sapien, consequat et diam sit amet, dapibus bibendum 	justo. Duis 		laoreet hendrerit lobortis.',
+	doctorsSurgery:surgery1
 	).save()
 
 	def doctor2 = new Doctor (
@@ -43,21 +44,24 @@ class BootStrap {
 	password:'secret222',
 	doctorOffice:'D-9888',
 	doctorPhone:'01111777',
-	bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ante sapien, consequat et diam sit amet, dapibus justo. Duis laoreet 		hendrerit lobortis.'
+	bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ante sapien, consequat et diam sit amet, dapibus justo. Duis laoreet 		hendrerit lobortis.',
+	doctorsSurgery:surgery1
 	).save()
 
 	def appointment1 = new Appointment(
 	appDate:new Date('09/09/2019'),
 	appTime:'9:00am',
 	appDuration:120,
-	roomNumber:'EEE-5'
+	roomNumber:'EEE-5',
+	ownedAppointments:doctor1
 	).save()
 
 	def appointment2 = new Appointment(
 	appDate:new Date('11/04/2019'),
 	appTime:'3:00pm',
 	appDuration:30,
-	roomNumber:'A-1111'
+	roomNumber:'A-1111',
+	ownedAppointments:doctor1
 	).save()
 
 	def patient1 = new Patient (
@@ -87,7 +91,8 @@ class BootStrap {
 	qualifications:'Degree in Nursing',
 	nurseEmail:'JackyS@gmail.com',
 	nurseOffice:'E555',
-	nursePhone:'0745389034'
+	nursePhone:'0745389034',
+	nursesDoctorsSurg:surgery1
 	).save()
 
 	def nurse2 = new Nurse (
@@ -95,7 +100,8 @@ class BootStrap {
 	qualifications:'Registered General Nurse',
 	nurseEmail:'s.peters@meyemail.com',
 	nurseOffice:'B-4555',
-	nursePhone:'0114 222 4433'
+	nursePhone:'0114 222 4433',
+	nursesDoctorsSurg:surgery1
 	).save()
 	
 	def receptionist1 = new Receptionist (
@@ -103,7 +109,8 @@ class BootStrap {
 	recepEmail:'DavesonP@gmail.com',	
 	recepUserame:'DaveP12',
 	recepPassword:'NewPassword1',
-	recepPhone:'0114 2 555'
+	recepPhone:'0114 2 555',
+	receptionistsDoctorSurg:surgery1
 	).save()
 
 	def receptionist2 = new Receptionist (
@@ -111,7 +118,8 @@ class BootStrap {
 	recepEmail:'r.kingston@email.com',	
 	recepUserame:'rking',
 	recepPassword:'Secret2019',
-	recepPhone:'0114 222 4445'
+	recepPhone:'0114 222 4445',
+	receptionistsDoctorSurg:surgery1
 	).save()
 	
 	def prescription1 = new Prescription (
@@ -120,7 +128,9 @@ class BootStrap {
 	medicine:'Calpol',
 	totalCost:2.21,
 	dateIssued:new Date('07/11/2020'),
-	patientPaying:true
+	patientPaying:true,
+	givenPrescriptions:doctor1,
+	recievedPrescriptions:patient1
 	).save()
 
 	def prescription2 = new Prescription (
@@ -129,11 +139,12 @@ class BootStrap {
 	medicine:'Paracetomol',
 	totalCost:5.90,
 	dateIssued:new Date('25/05/2019'),
-	patientPaying:true
+	patientPaying:true,
+	givenPrescriptions:doctor1,
+	recievedPrescriptions:patient1
 	).save()
 
-
-	surgery1.addToDoctors(doctor1)
+	/*surgery1.addToDoctors(doctor1)
 	surgery2.addToDoctors(doctor1)
 	
 	surgery1.addToNurses(nurse1)
@@ -143,7 +154,8 @@ class BootStrap {
 	nurse2.addToDoctors(doctor1)
 	
 	doctor1.addToPrescriptions(prescription1)
-	doctor1.addToPrescriptions(prescription2)
+	doctor1.addToPrescriptions(prescription2)*/
+
 
 	
     }

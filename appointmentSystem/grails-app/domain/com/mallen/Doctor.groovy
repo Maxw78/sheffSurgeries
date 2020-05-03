@@ -10,11 +10,9 @@ class Doctor {
 	String doctorOffice
 	String doctorPhone
 	String bio
+	Surgery doctorsSurgery
 	static hasMany=[prescriptions:Prescription, nurses:Nurse, patients:Patient, appointments:Appointment]
-	static belongsTo=[Surgery]
 	String toString() {return fullName}
-
-	
 
     static constraints = {
 	
@@ -26,6 +24,7 @@ class Doctor {
 	doctorOffice nullable: false, blank: false, maxSize: 10
 	doctorPhone nullable: false, blank: false, minSize: 6, maxSize: 17
 	bio nullable: false, blank: false, maxSize: 5000, widget:'textarea'
+	doctorsSurgery nullable: true, blank: true
 	
     }
 }

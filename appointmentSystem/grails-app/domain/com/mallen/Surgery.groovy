@@ -19,7 +19,7 @@ class Surgery {
 	postcode nullable: false, blank: false, minSize: 3, maxSize: 10
 	telephone nullable: false, blank: false, minSize: 6, maxSize: 17
 	numberOfPatients nullable: false, blank: false, max: 1000
-	description nullable: false, blank: false, maxSize: 5000, widget:'textarea'
+	description nullable: true, blank: true, maxSize: 5000, widget:'textarea'
 	openingTime nullable: false, blank: false, maxSize: 20
 	
     }

@@ -7,7 +7,7 @@ class Receptionist {
 	String recepUserame
 	String recepPassword
 	String recepPhone
-	static belongsTo=[Surgery]
+	Surgery receptionistsDoctorSurg
 	String toString() {return recepName}
 
     static constraints = {
@@ -17,6 +17,7 @@ class Receptionist {
 	recepUserame nullable: false, blank: false, maxSize: 30, unique: true	
 	recepPassword nullable: false, blank: false, minSize: 8, maxSize: 25
 	recepPhone nullable: false, blank: false, minSize: 6, maxSize: 17
+	receptionistsDoctorSurg nullable: true, blank: true
 
     }
 }
