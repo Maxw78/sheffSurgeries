@@ -1,6 +1,10 @@
+//Declaring Package name for the Domain
 package com.mallen
 
+//Declaration of the Class Receptionist
 class Surgery {
+
+//Defining Variables and Data Types
 
 	String name
 	String address
@@ -9,9 +13,12 @@ class Surgery {
 	int numberOfPatients 
 	String description
 	String openingTime
+	//Declaring one to many relationships and many to many relationships with other classes
 	static hasMany=[doctors:Doctor, receptionists:Receptionist, nurses:Nurse, patients:Patient, appointments:Appointment]
+	//Method to return the recepName as a string so the instance name will use recepName instead of the deafult text
 	String toString() {return name}
 
+	//Declaring constraints
     static constraints = {
 
 	name nullable: false, blank: false, maxSize: 50

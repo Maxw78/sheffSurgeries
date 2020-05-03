@@ -1,6 +1,10 @@
+//Declaring Package name for the Domain
 package com.mallen
 
+//Declaration of the Class Doctor
 class Doctor {
+
+//Defining Variables and Data Types
 
 	String fullName
 	String qualification
@@ -10,10 +14,14 @@ class Doctor {
 	String doctorOffice
 	String doctorPhone
 	String bio
+	//Many to one relationship with Surgery
 	Surgery doctorsSurgery
+	//Declaring one to many relationships and many to many relationships with other classes
 	static hasMany=[prescriptions:Prescription, nurses:Nurse, patients:Patient, appointments:Appointment]
+	//Method to return the fullName as a string so the instance name will use fullName instead of the deafult text
 	String toString() {return fullName}
 
+	//Declaring constraints
     static constraints = {
 	
 	fullName nullable: false, blank: false, maxSize: 50
